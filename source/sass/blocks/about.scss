@@ -1,0 +1,163 @@
+.about {
+  margin: 0 0 58px 0;
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+  margin: 0 auto 82px auto;
+  width: 260px;
+}
+
+.about__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  max-width: 410px;
+}
+
+.about__item {
+  height: 40px;
+  margin: 0 0 83px 0;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  &:last-child {
+    margin: 0 0 0 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+}
+
+.about__item--flower::before {
+  top: -55px;
+  left: 8px;
+  width: 33px;
+  height: 38px;
+  background: url("../img/flower.svg") no-repeat;
+}
+
+.about__item--slyle::before {
+  top: -55px;
+  left: 0;
+  width: 47px;
+  height: 27px;
+  background: url("../img/style.svg") no-repeat;
+}
+
+.about__item--heart::before {
+  top: -49px;
+  left: 7px;
+  width: 34px;
+  height: 27px;
+  background: url("../img/heart.svg") no-repeat;
+}
+
+.about__item--ball::before {
+  top: -52px;
+  left: 3px;
+  width: 35px;
+  height: 34px;
+  background: url("../img/ball.svg") no-repeat;
+}
+
+.about__item--rocket::before {
+  top: -52px;
+  left: -6px;
+  width: 55px;
+  height: 23px;
+  background: url("../img/rocket.svg") no-repeat;
+}
+
+.about__item--present::before {
+  top: -53px;
+  left: 3px;
+  width: 33px;
+  height: 32px;
+  background: url("../img/present.svg") no-repeat;
+}
+
+@media (min-width: 321px) {
+  .about__brake--mobile:not(:first-child) {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .about {
+    margin: 0 0 -29px;
+  }
+
+  .about__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin: 0 0 100px 0;
+    width: 100%;
+  }
+
+  .about__list {
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about__item {
+    width: 50%;
+    margin: 0 0 113px;
+  }
+
+  .about__item--ball {
+    order: 1;
+  }
+
+  .about__item--slyle {
+    order: 2;
+  }
+
+  .about__item--rocket {
+    order: 3;
+  }
+
+  .about__item--heart {
+    order: 4;
+  }
+
+  .about__item--present {
+    order: 5;
+  }
+}
+
+@media (min-width: $desktop) {
+  .about {
+    margin: 0 auto -24px;
+    padding-left: 224px;
+  }
+
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin: 0 0 100px 64px;
+  }
+
+  .about__list {
+    width: 701px;
+    margin: 0 0 0 63px;
+  }
+
+
+  .about__item {
+    margin: 0 0 114px;
+  }
+}

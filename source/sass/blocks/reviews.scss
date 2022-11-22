@@ -1,0 +1,248 @@
+.reviews {
+  position: relative;
+  margin: 0 0 91px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 6px;
+    bottom: -52px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../img/zigzag-line.svg");
+  }
+}
+
+.reviews__title {
+  margin: 0 0 13px 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: #444444;
+
+  @media (min-width: 321px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.reviews__item {
+  display: none;
+}
+
+.reviews__item--active {
+  display: block;
+}
+
+.reviews__text {
+  margin: 0;
+}
+
+.reviews__person {
+  margin: 34px 0 3px 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.reviews__link {
+  display: block;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 30px;
+  color: #444444;
+  font-style: normal;
+  margin: 0 0 29px 0;
+}
+
+.reviews__buttons {
+  min-width: 260px;
+  display: flex;
+  height: 52px;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 0 38px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 52px;
+    background: #ececec;
+    transform: translateX(-50%);
+  }
+}
+
+.reviews__btn {
+  padding: 0;
+  width: 50%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.reviews__btn--back::before {
+  content: "";
+  width: 50px;
+  height: 26px;
+  background: url("../img/huge-arrow-left.svg") no-repeat;
+}
+
+.reviews__btn--next::before {
+  content: "";
+  width: 50px;
+  height: 26px;
+  background: url("../img/huge-arrow-right.svg") no-repeat;
+}
+
+@media (min-width: $tablet) {
+  .reviews {
+    position: relative;
+    padding-top: 84px;
+    margin: 0 0 201px 0;
+
+    &::before {
+      content: "";
+      width: 350px;
+      height: 457px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url("../img/review-image.png") no-repeat left center;
+      background-size: contain;
+      z-index: 1;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/review-image@2x.png") no-repeat left center;
+        background-size: contain;
+      }
+    }
+
+    &::after {
+      height: 17px;
+      background: url("../img/zigzag-index-tablet.svg");
+      bottom: -133px;
+    }
+  }
+
+  .reviews__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin: 0 0 38px 0;
+    position: relative;
+    z-index: 5;
+    width: 250px;
+  }
+
+  .reviews__list {
+    font-size: 17px;
+    line-height: 30px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .reviews__person {
+    margin: 61px 0 3px 0;
+    font-size: 18px;
+  }
+
+  .reviews__link {
+    margin: 0;
+  }
+
+  .reviews__button {
+    position: absolute;
+    top: 79px;
+    right: 50px;
+    width: 175px;
+    height: 52px;
+  }
+
+  .reviews__buttons {
+    border: none;
+    min-width: 137px;
+    margin: 0;
+    position: absolute;
+    right: 69px;
+    bottom: 2px;
+    z-index: 100;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .reviews__btn--back {
+    margin: 0 35px 0 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .reviews {
+    margin: 0 auto;
+    padding-top: 78px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -195px;
+      height: 34px;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url("../img/zigzag-line-desktop.svg.svg") no-repeat;
+    }
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin: 0 0 36px 174px;
+  }
+
+  .reviews__list {
+    padding: 0 0 0 175px;
+  }
+
+  .reviews__person {
+    margin: 45px 0 3px;
+    font-size: 17px;
+  }
+
+  .reviews__buttons {
+    right: 19px;
+    bottom: 4px;
+  }
+
+  .reviews__button {
+    right: 0;
+  }
+}

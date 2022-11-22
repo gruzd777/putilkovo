@@ -1,0 +1,36 @@
+.form-promo__title {
+  margin: 0 auto;
+}
+
+.form-promo__heading {
+  margin: 0 0 29px 0;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: #444444;
+}
+
+@media (min-width: $tablet) {
+  .form-promo__group {
+    background: #f1f1f1;
+    padding: 55px 0 86px 0;
+    margin: 0 0 15px 0;
+    position: relative;
+  }
+
+  .form-promo__heading {
+    font-size: 17px;
+    line-height: 30px;
+    padding: 40px 0 0 0;
+    margin: 0 0 81px 0;
+    width: 625px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .form-promo__heading {
+    padding: 95px 0 0;
+    margin: 0 0 79px 176px;
+    width: 675px;
+  }
+}

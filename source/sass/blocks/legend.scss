@@ -1,0 +1,52 @@
+.legend {
+  position: relative;
+  padding: 0;
+  border: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $base-green-l;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 8px;
+    left: 0;
+    background: #62d1ba;
+    z-index: 1;
+  }
+}
+
+.legend__text {
+  position: relative;
+  display: inline-block;
+  background: #ffffff;
+  z-index: 2;
+  padding-right: 25px;
+}
+
+@media (min-width: $tablet) {
+  .legend::before {
+    display: none;
+  }
+
+  .legend__text {
+    background: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .legend--adress {
+    padding: 0 0 0 61px;
+    box-sizing: border-box;
+  }
+
+  .legend--extra {
+    padding: 0 0 0 63px;
+    width: 97px;
+    margin: 0 16px 0 0;
+  }
+}

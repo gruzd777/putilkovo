@@ -1,0 +1,52 @@
+.input-special {
+  position: relative;
+  flex-grow: 1;
+}
+
+.input-special__input {
+  width: 100%;
+}
+
+.input-special__svg {
+  position: absolute;
+  opacity: 0.2;
+  right: 0;
+  top: 0;
+}
+
+.input-special__input:hover + .input-special__svg {
+  opacity: 1;
+  fill: #62d1ba;
+}
+
+.input-special__input:active + .input-special__svg {
+  opacity: 1;
+  fill: #62d1ba;
+}
+
+.input-special__input:focus {
+  outline: none;
+}
+
+@media (min-width: $tablet) {
+  .input-special {
+    margin: -15px 0 0 0;
+  }
+
+  .input-special__svg {
+    right: 27px;
+    top: 11px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .input-special {
+    width: 699px;
+    flex-grow: 0;
+  }
+
+  .input-special__svg {
+    right: 6px;
+    top: 14px;
+  }
+}
