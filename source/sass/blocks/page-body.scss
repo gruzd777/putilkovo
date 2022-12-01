@@ -1,0 +1,20 @@
+.page-body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: "Play", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-position: top center;
+  color: $basic_black;
+  overflow-x: hidden;
+
+  min-height: 100%;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
